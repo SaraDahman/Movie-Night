@@ -1,10 +1,17 @@
+import Header from "./components/Header";
+import Row from "./components/Row";
+import requests from "./requests";
+import './style/App.css'
 
 function App() {  
   return (
     <div className="App">
-      <h1>hello</h1>
+      <Header />
+      {requests.map((request, i) => <Row key={i} 
+      title ={request.title} 
+      fetchUrl={request.fetchUrl}
+      />)}
     </div>
   );
 }
-//https://api.themoviedb.org/3/discover/movie?api_key=2459c7ba4f9cdb6af41d6b6f6752eb7e&with_genres=35
 export default App;
