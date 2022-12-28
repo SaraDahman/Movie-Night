@@ -12,7 +12,7 @@ const Header:FC = () =>{
   useEffect(()=>{
     const fetchData = async () =>{
         try {
-            const {data} = await axios.get(requests[0].fetchUrl)
+            const {data} = await axios.get(requests[1].fetchUrl)
             const random = Math.floor(Math.random() * data.results.length-1)
             setMovie(data.results[random]);            
           } catch (error) {
@@ -35,13 +35,19 @@ const Header:FC = () =>{
       style={{
         backgroundSize :'cover',
         backgroundImage: `url(${imageBaseUrl}${movie?.backdrop_path})`,
+        backgroundPosition: 'top'
       }}
     >
       <div className="banner-content">
         <h1>{movie?.name || movie?.title || movie?.original_title}</h1>
         <div className="buttons">
-          <button>Play</button>
-          <button>More info</button>
+          <button>
+            <i className="fa-solid fa-play"></i>
+            Play
+          </button>
+          <button>
+            <i className="fa-solid fa-circle-info"></i>            More info
+          </button>
         </div>
         <p>
           {truncate(movie?.overview, 50)}
