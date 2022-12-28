@@ -5,7 +5,7 @@ import './style/App.css'
 
 function App() {  
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       {requests.map((request, i) => <Row key={i} 
       title ={request.title} 

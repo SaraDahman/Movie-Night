@@ -1,5 +1,11 @@
 .row {
   padding: 0 1.2rem;
+  color: #fff;
+}
+
+.row h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .row .container {
