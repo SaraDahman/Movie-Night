@@ -1,0 +1,76 @@
+.banner {
+  color: #fff;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0, 0, 0, 0.6),
+    #141414
+  );
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.banner .banner-content {
+  margin-left: 3rem;
+  z-index: 1;
+}
+
+.banner .banner-content h1 {
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.banner .banner-content p {
+  max-width: 40rem;
+  line-height: 1.3;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.banner .banner-content button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 2rem;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.banner .banner-content button:nth-child(1) {
+  background-color: #fff;
+  color: #000;
+}
+
+.banner .banner-content button:nth-child(1):hover {
+  filter: brightness(0.8);
+  transition: all 0.2s;
+}
+
+.banner .banner-content button:nth-child(2) {
+  background-color: #6a6d6b;
+  color: #fff;
+}
+
+.banner .banner-content button:nth-child(2):hover {
+  background-color: rgb(106, 109, 107, 0.7);
+  transition: all 0.2s;
+}
+
+.banner .banner-content button i {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
