@@ -21,7 +21,6 @@ const Header:FC = () =>{
         }
         fetchData();
       },[])
-      console.log(movie);
 
       const truncate = (str:string | undefined, n:number) => {
         if(str){
