@@ -19,12 +19,12 @@
   );
   left: 0;
   top: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
 .banner .banner-content {
   margin-left: 3rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .banner .banner-content h1 {
@@ -73,4 +73,16 @@
 .banner .banner-content button i {
   margin-right: 0.5rem;
   font-size: 1.3rem;
+}
+
+.banner .video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.banner .video iframe {
+  width: 100%;
+  height: 100%;
 }
